@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.oauth2.client.EnableOAuth2Sso;
 
 @SpringBootApplication
-@EnableOAuth2Sso
+@EnableOAuth2Sso // acho que não precisa desse cara aqui! Testar!
 public class UserSpringApplication {
 
 	private static Logger LOG = LoggerFactory.getLogger(UserSpringApplication.class);
