@@ -13,10 +13,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		
 		http.authorizeRequests()
+			.antMatchers("/user").hasRole("ADMIN")
+			.antMatchers("/**").permitAll()
 			.anyRequest().authenticated()
 			.and()
-			.formLogin().and()
-			.httpBasic();
+			.formLogin()/*.and()
+			.httpBasic()*/;
 		
 		
 		/*http
